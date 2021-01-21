@@ -19,6 +19,7 @@
 		93818C5F25B97D7500286544 /* BinarJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5E25B97D7500286544 /* BinarJobsVC.swift */; };
 		93818C6625B98BB800286544 /* GitHubJobsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C6525B98BB800286544 /* GitHubJobsModel.swift */; };
 		93818C6925B98BE800286544 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C6825B98BE800286544 /* Service.swift */; };
+		93818C6C25B996AB00286544 /* GitHubJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C6B25B996AB00286544 /* GitHubJobCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		93818C5E25B97D7500286544 /* BinarJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarJobsVC.swift; sourceTree = "<group>"; };
 		93818C6525B98BB800286544 /* GitHubJobsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsModel.swift; sourceTree = "<group>"; };
 		93818C6825B98BE800286544 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		93818C6B25B996AB00286544 /* GitHubJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		93818C4A25B9775F00286544 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93818C6B25B996AB00286544 /* GitHubJobCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				93818C4E25B9779400286544 /* GitHubVC.swift in Sources */,
 				93818C3325B976F900286544 /* AppDelegate.swift in Sources */,
 				93818C5725B977BC00286544 /* BulldogJobVC.swift in Sources */,
+				93818C6C25B996AB00286544 /* GitHubJobCell.swift in Sources */,
 				93818C3525B976F900286544 /* SceneDelegate.swift in Sources */,
 				93818C5A25B977C800286544 /* FaceBookVC.swift in Sources */,
 				93818C6625B98BB800286544 /* GitHubJobsModel.swift in Sources */,
