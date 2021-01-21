@@ -16,6 +16,7 @@
 		93818C5425B977B000286544 /* NoFluffJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5325B977B000286544 /* NoFluffJobsVC.swift */; };
 		93818C5725B977BC00286544 /* BulldogJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5625B977BC00286544 /* BulldogJobVC.swift */; };
 		93818C5A25B977C800286544 /* FaceBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5925B977C800286544 /* FaceBookVC.swift */; };
+		93818C5F25B97D7500286544 /* BinarJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5E25B97D7500286544 /* BinarJobsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		93818C5325B977B000286544 /* NoFluffJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFluffJobsVC.swift; sourceTree = "<group>"; };
 		93818C5625B977BC00286544 /* BulldogJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulldogJobVC.swift; sourceTree = "<group>"; };
 		93818C5925B977C800286544 /* FaceBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBookVC.swift; sourceTree = "<group>"; };
+		93818C5E25B97D7500286544 /* BinarJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarJobsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				93818C5925B977C800286544 /* FaceBookVC.swift */,
-				93818C5625B977BC00286544 /* BulldogJobVC.swift */,
 				93818C5325B977B000286544 /* NoFluffJobsVC.swift */,
+				93818C5E25B97D7500286544 /* BinarJobsVC.swift */,
+				93818C5625B977BC00286544 /* BulldogJobVC.swift */,
 				93818C5025B977A200286544 /* StackOverflowVC.swift */,
 				93818C4D25B9779400286544 /* GitHubVC.swift */,
 			);
@@ -184,6 +187,7 @@
 				93818C5A25B977C800286544 /* FaceBookVC.swift in Sources */,
 				93818C5425B977B000286544 /* NoFluffJobsVC.swift in Sources */,
 				93818C5125B977A200286544 /* StackOverflowVC.swift in Sources */,
+				93818C5F25B97D7500286544 /* BinarJobsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

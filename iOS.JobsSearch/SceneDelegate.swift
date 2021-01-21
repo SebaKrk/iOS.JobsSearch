@@ -13,10 +13,70 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+      
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = createTabbar()
+        window?.overrideUserInterfaceStyle = .light
+        window?.makeKeyAndVisible()
+    }
+    
+    func createStackOverflowNC() -> UINavigationController {
+        let stackOverflowVC = StackOverflowVC()
+        stackOverflowVC.title = "Stack Overflow"
+        stackOverflowVC.tabBarItem = UITabBarItem(title: "StackOverflow", image: UIImage(named: "stackOverflow"), tag: 0)
+        
+        return UINavigationController(rootViewController: stackOverflowVC)
+    }
+    
+    func createGitHubNC() ->UINavigationController {
+        let gitHubVC = GitHubVC()
+        gitHubVC.title = "GitHub"
+        gitHubVC.tabBarItem = UITabBarItem(title: "Git", image: UIImage(named: "github"), tag: 1)
+        
+        return UINavigationController(rootViewController: gitHubVC)
+    }
+    
+    func createBinarJobsNC() -> UINavigationController {
+        let binarJobsVC = BinarJobsVC()
+        binarJobsVC.title = "Binar Jobs"
+        binarJobsVC.tabBarItem = UITabBarItem(title: "BinarJobs", image: UIImage(named: "binarjobs"), tag: 2)
+        
+        return UINavigationController(rootViewController: binarJobsVC)
+    }
+  
+    func createBulldogNC() -> UINavigationController {
+        let bulldogJobVC = BulldogJobVC()
+        bulldogJobVC.title = "BulldogJob"
+        bulldogJobVC.tabBarItem = UITabBarItem(title: "BulldogJob", image: UIImage(named: "bulldog"), tag: 3)
+        
+        return UINavigationController(rootViewController: bulldogJobVC)
+    }
+ 
+    func createFaceBookNC() -> UINavigationController {
+        let faceBookVC = FaceBookVC()
+        faceBookVC.title = "Developers iOS Poland: Jobs"
+        faceBookVC.tabBarItem = UITabBarItem(title: "FaceBook", image: UIImage(named: "facebook"), tag: 4)
+        
+        return UINavigationController(rootViewController: faceBookVC)
+    }
+    func createNoFluffJobNC() -> UINavigationController {
+        let noFluffJobsVC = NoFluffJobsVC()
+        noFluffJobsVC.title = "NoFluffJobs"
+        noFluffJobsVC.tabBarItem = UITabBarItem(title: "NoFluffJobs", image: UIImage(named: "noFluffJobs"), tag: 5)
+    
+        return UINavigationController(rootViewController: noFluffJobsVC)
+    } // extra
+    
+    func createTabbar() -> UITabBarController {
+
+        let tabbar  = UITabBarController()
+        UITabBar.appearance().tintColor = .systemRed
+        tabbar.viewControllers = [createStackOverflowNC(),createGitHubNC(),createBinarJobsNC() ,createBulldogNC(),createFaceBookNC()]
+        
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
