@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NoFluffJobsVC.swift
 //  iOS.JobsSearch
 //
 //  Created by Sebastian Sciuba on 21/01/2021.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class NoFluffJobsVC : UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

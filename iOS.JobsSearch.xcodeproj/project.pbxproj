@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		93818C3325B976F900286544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C3225B976F900286544 /* AppDelegate.swift */; };
 		93818C3525B976F900286544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C3425B976F900286544 /* SceneDelegate.swift */; };
-		93818C3725B976F900286544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C3625B976F900286544 /* ViewController.swift */; };
 		93818C3C25B976FD00286544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93818C3B25B976FD00286544 /* Assets.xcassets */; };
 		93818C3F25B976FD00286544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93818C3D25B976FD00286544 /* LaunchScreen.storyboard */; };
+		93818C4E25B9779400286544 /* GitHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C4D25B9779400286544 /* GitHubVC.swift */; };
+		93818C5125B977A200286544 /* StackOverflowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5025B977A200286544 /* StackOverflowVC.swift */; };
+		93818C5425B977B000286544 /* NoFluffJobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5325B977B000286544 /* NoFluffJobsVC.swift */; };
+		93818C5725B977BC00286544 /* BulldogJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5625B977BC00286544 /* BulldogJobVC.swift */; };
+		93818C5A25B977C800286544 /* FaceBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93818C5925B977C800286544 /* FaceBookVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93818C2F25B976F900286544 /* iOS.JobsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.JobsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93818C3225B976F900286544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93818C3425B976F900286544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93818C3625B976F900286544 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93818C3B25B976FD00286544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93818C3E25B976FD00286544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93818C4025B976FD00286544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93818C4D25B9779400286544 /* GitHubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubVC.swift; sourceTree = "<group>"; };
+		93818C5025B977A200286544 /* StackOverflowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowVC.swift; sourceTree = "<group>"; };
+		93818C5325B977B000286544 /* NoFluffJobsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFluffJobsVC.swift; sourceTree = "<group>"; };
+		93818C5625B977BC00286544 /* BulldogJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulldogJobVC.swift; sourceTree = "<group>"; };
+		93818C5925B977C800286544 /* FaceBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBookVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,48 @@
 			children = (
 				93818C3225B976F900286544 /* AppDelegate.swift */,
 				93818C3425B976F900286544 /* SceneDelegate.swift */,
-				93818C3625B976F900286544 /* ViewController.swift */,
+				93818C4C25B9777400286544 /* Model */,
+				93818C4B25B9776600286544 /* View Model */,
+				93818C4A25B9775F00286544 /* View */,
+				93818C4925B9775500286544 /* Controller */,
 				93818C3B25B976FD00286544 /* Assets.xcassets */,
 				93818C3D25B976FD00286544 /* LaunchScreen.storyboard */,
 				93818C4025B976FD00286544 /* Info.plist */,
 			);
 			path = iOS.JobsSearch;
+			sourceTree = "<group>";
+		};
+		93818C4925B9775500286544 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93818C5925B977C800286544 /* FaceBookVC.swift */,
+				93818C5625B977BC00286544 /* BulldogJobVC.swift */,
+				93818C5325B977B000286544 /* NoFluffJobsVC.swift */,
+				93818C5025B977A200286544 /* StackOverflowVC.swift */,
+				93818C4D25B9779400286544 /* GitHubVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93818C4A25B9775F00286544 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93818C4B25B9776600286544 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		93818C4C25B9777400286544 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93818C3725B976F900286544 /* ViewController.swift in Sources */,
+				93818C4E25B9779400286544 /* GitHubVC.swift in Sources */,
 				93818C3325B976F900286544 /* AppDelegate.swift in Sources */,
+				93818C5725B977BC00286544 /* BulldogJobVC.swift in Sources */,
 				93818C3525B976F900286544 /* SceneDelegate.swift in Sources */,
+				93818C5A25B977C800286544 /* FaceBookVC.swift in Sources */,
+				93818C5425B977B000286544 /* NoFluffJobsVC.swift in Sources */,
+				93818C5125B977A200286544 /* StackOverflowVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
