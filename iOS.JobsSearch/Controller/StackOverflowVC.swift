@@ -43,6 +43,8 @@ class StackOverflowVC : UIViewController {
         logoLabel.translatesAutoresizingMaskIntoConstraints = false
         logoLabel.topAnchor.constraint(equalTo: logoImage.bottomAnchor,constant: 10).isActive = true
         logoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
+
     }
+
+ 
 }
