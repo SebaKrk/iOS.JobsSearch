@@ -30,7 +30,7 @@ class GitHubVC : UIViewController {
         tableView.rowHeight = 75
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(GitHubJobCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     func setupViewConstraints () {
         view.addSubview(tableView)
@@ -53,11 +53,13 @@ class GitHubVC : UIViewController {
 }
 extension GitHubVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return jobsData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! GitHubJobCell
+        cell.jobTitleLable.text = jobsData[indexPath.row].title
+        return cell
     }
     
     
