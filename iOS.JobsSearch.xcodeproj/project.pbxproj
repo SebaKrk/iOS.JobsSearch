@@ -84,8 +84,8 @@
 				93818C5325B977B000286544 /* NoFluffJobsVC.swift */,
 				93818C5E25B97D7500286544 /* BinarJobsVC.swift */,
 				93818C5625B977BC00286544 /* BulldogJobVC.swift */,
-				93818C5025B977A200286544 /* StackOverflowVC.swift */,
 				93818C4D25B9779400286544 /* GitHubVC.swift */,
+				93818C5025B977A200286544 /* StackOverflowVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
