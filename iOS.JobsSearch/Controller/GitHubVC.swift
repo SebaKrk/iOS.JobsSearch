@@ -14,6 +14,7 @@ class GitHubVC : UIViewController {
     var tableView = UITableView()
     var reuseIdentifier = "cell"
     var serwice = Service()
+    var jobsData = [GitHubJobsModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class GitHubVC : UIViewController {
         view.backgroundColor = .white
         setupTableView()
         setupViewConstraints()
+        loadData()
         
     }
     
@@ -37,6 +39,15 @@ class GitHubVC : UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    func loadData() {
+        serwice.getJASON {
+            data in
+            self.jobsData = data
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
 }
