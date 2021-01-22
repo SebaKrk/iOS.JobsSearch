@@ -8,6 +8,7 @@
 
 
 import UIKit
+import SafariServices
 
 class GitHubVC : UIViewController {
     
@@ -15,7 +16,7 @@ class GitHubVC : UIViewController {
     var reuseIdentifier = "cell"
     var serwice = Service()
     var jobsData = [GitHubJobsModel]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +50,7 @@ class GitHubVC : UIViewController {
             }
         }
     }
-
+    
 }
 extension GitHubVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,11 +59,21 @@ extension GitHubVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! GitHubJobCell
-//        cell.jobTitleLable.text = jobsData[indexPath.row].title
+        
         let model = jobsData[indexPath.row]
         cell.update(model: model)
+        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
+        
         return cell
     }
-    
-    
 }
+
+extension GitHubVC: SFSafariViewControllerDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let safariVC = SFSafariViewController(url: NSURL(string: jobsData[indexPath.row].url!)! as URL)
+        present(safariVC, animated: true, completion: nil)
+        safariVC.delegate = self
+    }
+}
+
