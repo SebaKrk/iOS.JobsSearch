@@ -28,7 +28,10 @@ class StackOverflowVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemOrange
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor.systemOrange.cgColor, UIColor.black.cgColor]
+        view.layer.insertSublayer(gradientLayer, at: 0)
         setUpLogo()
     }
     
@@ -43,8 +46,5 @@ class StackOverflowVC : UIViewController {
         logoLabel.translatesAutoresizingMaskIntoConstraints = false
         logoLabel.topAnchor.constraint(equalTo: logoImage.bottomAnchor,constant: 10).isActive = true
         logoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-
     }
-
- 
 }
