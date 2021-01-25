@@ -6,15 +6,25 @@
 //
 
 import UIKit
+import WebKit
 
-class StackOverflowVC : UIViewController {
+class StackOverflowVC : UIViewController, WKNavigationDelegate {
     
-    let logoImage : UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "stackOverflow"))
-        image.contentMode = .scaleAspectFill
-        return image
+//    let logoImage : UIImageView = {
+//        let image = UIImageView(image: #imageLiteral(resourceName: "stackOverflow"))
+//        image.contentMode = .scaleAspectFill
+//        return image
+//    }()
+    
+    var webView: WKWebView!
+    
+    let logoImage : UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "stackOverflow"), for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.addTarget(self, action: #selector(handleLogoButton), for: .touchUpInside)
+        return button
     }()
-    
     let logoLabel : UILabel = {
         let label = UILabel()
         label.text = "stackOverFlow"
@@ -24,6 +34,16 @@ class StackOverflowVC : UIViewController {
         return label
     }()
     
+    @objc func handleLogoButton() {
+        print("press")
+        
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
+        
+        let url = URL(string: "https://stackoverflow.com/jobs?q=ios&tl=ios+swift")!
+        webView.load(URLRequest(url: url))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,3 +68,5 @@ class StackOverflowVC : UIViewController {
         logoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }
+
+// https://stackoverflow.com/jobs?q=ios&tl=ios+swift
