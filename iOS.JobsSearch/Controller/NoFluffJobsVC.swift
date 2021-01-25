@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class NoFluffJobsVC : UIViewController,WKNavigationDelegate {
+class NoFluffJobsVC : UIViewController,WKNavigationDelegate { // extra
     
     var webView: WKWebView!
     let background = UIColor(displayP3Red: 63/255, green: 195/255, blue: 233/255, alpha: 1)
