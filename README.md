@@ -1,4 +1,4 @@
 # iOS.JobsSearch
 
-<img src="iOS.JobsSearch.gif" width="200" height="400" >
+<img src="iOS.JobsSearch.gif" width="300" height="500" >
 
