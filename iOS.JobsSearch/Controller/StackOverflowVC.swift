@@ -38,7 +38,7 @@ class StackOverflowVC : UIViewController, WKNavigationDelegate {
     }
     
     @objc func handleLogoButton() {
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.logoButton.alpha = 0
         }, completion: { done in
             if done {

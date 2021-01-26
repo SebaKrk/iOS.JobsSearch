@@ -18,7 +18,7 @@ class Service {
             do {
                 let decodeData = try JSONDecoder().decode([GitHubJobsModel].self, from: data)
                 completed(decodeData)
-                print(decodeData)
+                
             } catch {
                 print("error masage: \(error)")
             }

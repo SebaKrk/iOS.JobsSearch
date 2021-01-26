@@ -31,7 +31,7 @@ class BinarJobsVC: UIViewController, WKNavigationDelegate {
     }
     
     @objc func handleLogoButton() {
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.logoButton.alpha = 0
         }, completion: { done in
             if done {
@@ -55,7 +55,7 @@ class BinarJobsVC: UIViewController, WKNavigationDelegate {
         logoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         logoButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        logoButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        logoButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     func setUpGradientLayer() {
