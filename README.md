@@ -1,5 +1,4 @@
 # iOS.JobsSearch
 
-
-![iOS.JobsSearch](iOS.JobsSearch.gif)
+<img src="iOS.JobsSearch.gif" width="100" height="200" >
 
