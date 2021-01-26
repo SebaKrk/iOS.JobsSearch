@@ -12,14 +12,10 @@ class BinarJobsVC: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     
-    var logoImage : UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "binarjobs-logo"))
-        image.contentMode = .scaleToFill
-        return image
-    }()
-    
     let logoButton : UIButton = {
         let button = UIButton()
+        button.setBackgroundImage(#imageLiteral(resourceName: "binarjobs-logo"), for: .normal)
+        button.contentMode = .scaleAspectFill
         button.addTarget(self, action: #selector(handleLogoButton), for: .touchUpInside)
         return button
     }()
@@ -35,7 +31,16 @@ class BinarJobsVC: UIViewController, WKNavigationDelegate {
     }
     
     @objc func handleLogoButton() {
-        
+        UIView.animate(withDuration: 1, animations: {
+            self.logoButton.alpha = 0
+        }, completion: { done in
+            if done {
+                self.setupWebView()
+            }
+        })
+    }
+     
+    func setupWebView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
@@ -45,19 +50,12 @@ class BinarJobsVC: UIViewController, WKNavigationDelegate {
     }
     
     func setUpLogo() {
-        view.addSubview(logoImage)
-        logoImage.translatesAutoresizingMaskIntoConstraints = false
-        logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        logoImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        logoImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        logoImage.widthAnchor.constraint(equalToConstant: 320).isActive = true
-        
         view.addSubview(logoButton)
         logoButton.translatesAutoresizingMaskIntoConstraints = false
         logoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         logoButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        logoButton.widthAnchor.constraint(equalToConstant: 320).isActive = true
+        logoButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
     }
     
     func setUpGradientLayer() {
