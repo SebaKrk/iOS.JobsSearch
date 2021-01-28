@@ -5,15 +5,9 @@
 //  Created by Sebastian Sciuba on 21/01/2021.
 //
 
-//let image = UIImage(named: "image_name")
-//let button = UIButton(type: UIButton.ButtonType.custom)
-//button.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
-//button.setImage(image, for: .normal)
-//button.addTarget(self, action: #selector(function), for: .touchUpInside)
-
-
 import UIKit
 import WebKit
+import Network
 
 class StackOverflowVC : UIViewController, WKNavigationDelegate {
     
@@ -40,13 +34,16 @@ class StackOverflowVC : UIViewController, WKNavigationDelegate {
     @objc func handleLogoButton() {
         UIView.animate(withDuration: 0.5, animations: {
             self.logoButton.alpha = 0
+            
         }, completion: { done in
             if done {
+                self.monitoryNetwok()
                 self.setupWebView()
             }
         })
     }
-   
+    
+    
     func setupWebView() {
         webView = WKWebView()
         webView.navigationDelegate = self
@@ -71,6 +68,19 @@ class StackOverflowVC : UIViewController, WKNavigationDelegate {
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor.systemOrange.cgColor, UIColor.darkGray.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func monitoryNetwok() {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler =  { path in
+            if path.status == .unsatisfied {
+                DispatchQueue.main.async {
+                    Alert.showInternetAlert(on: self)
+                }
+            } 
+        }
+        let queue = DispatchQueue(label: "Network")
+        monitor.start(queue: queue)
     }
 }
 
